@@ -1,8 +1,8 @@
 import React from "react";
 import calendarVector from "../../assets/card/calendar.svg";
 import personVector from "../../assets/card/person.svg";
-import avatar1 from "../../assets/card/avatar1.svg";
-import avatar2 from "../../assets/card/avatar2.svg";
+import avatar1 from "../../assets/card/avatar1.png";
+import avatar2 from "../../assets/card/avatar2.png";
 import optionsIcon from "../../assets/card/optionsIcon.svg";
 
 
