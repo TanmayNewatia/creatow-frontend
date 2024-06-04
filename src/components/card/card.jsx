@@ -9,7 +9,7 @@ import optionsIcon from "../../assets/card/optionsIcon.svg";
 const Card = (props) => {
   return (
     <>
-      <div className="w-full max-w-[300px] min-h-[325px] bg-[#27194E] border border-[#d0aaff30] rounded-2xl p-4 flex flex-col justify-start items-center">
+      <div className="w-full max-w-[300px] h-full min-h-[325px] bg-[#27194E] border border-[#d0aaff30] rounded-2xl p-4 flex flex-col justify-start items-center">
         {/* Top avatars & extra options section - conditionally rendered */}
         {props.showAvatars && (
           <div className="w-full h-fit flex justify-between items-center gap-3 pb-3">
@@ -36,7 +36,7 @@ const Card = (props) => {
 
             {/* Card & creator name */}
             <div className="space-y-1">
-              <p className="text-white font-semibold leading-[24px] line-clamp-1">
+              <p className="text-white font-semibold leading-[24px]">
                 {props.collectionName}
               </p>
               <p className="text-[#94A3B8] text-[12px] font-semibold leading-[16px]">
@@ -48,7 +48,7 @@ const Card = (props) => {
           <div className="text-white flex gap-4">
             <div className="w-fit flex justify-center items-center gap-1">
               <img src={calendarVector} alt="" />
-              <p className="text-[12px] leading-[10px] line-clamp-1">
+              <p className="text-[12px] leading-[10px] text-nowrap">
                 {props.publishedDate}
               </p>
             </div>
