@@ -58,7 +58,7 @@ function Navbar() {
           name=""
           id=""
           placeholder="Collection, item or user"
-          className="lg:w-1/3 bg-[#2B225B] w-4/5 bg-search-bar-icon bg-no-repeat bg-[12px_center] rounded-[48px] py-3 px-3 pl-10 text-[#9A8FFF] text-sm outline-none"
+          className="lg:w-1/3 bg-[#2B225B] w-4/5 bg-search-bar-icon bg-no-repeat bg-[12px_center] rounded-[48px] py-3 px-3 pl-10 text-[#9A8FFF] font-readex-pro text-sm outline-none"
         />
 
         {/* Small profile icon - visible only on mobile */}
