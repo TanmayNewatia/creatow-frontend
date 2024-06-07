@@ -22,8 +22,8 @@ function App() {
       </section>
 
       {/* Categories section */}
-      <section className="w-full bg-[#100E1F] py-8">
-        <div className="w-fit max-w-[1260px] flex flex-nowrap gap-[10px] overflow-auto xl:overflow-hidden mx-auto">
+      <section className="w-full bg-[#100E1F] py-8 px-2 overflow-auto xl:overflow-hidden">
+        <div className="w-fit max-w-[1260px] flex flex-nowrap gap-[10px] mx-auto">
           {categories.map((item) => {
             return (
               <CategoryCard
