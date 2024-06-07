@@ -44,41 +44,41 @@ const creatorItems = [
         creatorName: 'Whiteswan',
         amount: '$15.735.436'
     },
-    {
-        imageURL: image4,
-        creatorName: 'Whiteswan',
-        amount: '$15.735.436'
-    },
-    {
-        imageURL: image4,
-        creatorName: 'Whiteswan',
-        amount: '$15.735.436'
-    },
-    {
-        imageURL: image4,
-        creatorName: 'Whiteswan',
-        amount: '$15.735.436'
-    },
-    {
-        imageURL: image4,
-        creatorName: 'Whiteswan',
-        amount: '$15.735.436'
-    },
-    {
-        imageURL: image4,
-        creatorName: 'Whiteswan',
-        amount: '$15.735.436'
-    },
-    {
-        imageURL: image4,
-        creatorName: 'Whiteswan',
-        amount: '$15.735.436'
-    },
-    {
-        imageURL: image4,
-        creatorName: 'Whiteswan',
-        amount: '$15.735.436'
-    },
+    // {
+    //     imageURL: image4,
+    //     creatorName: 'Whiteswan',
+    //     amount: '$15.735.436'
+    // },
+    // {
+    //     imageURL: image4,
+    //     creatorName: 'Whiteswan',
+    //     amount: '$15.735.436'
+    // },
+    // {
+    //     imageURL: image4,
+    //     creatorName: 'Whiteswan',
+    //     amount: '$15.735.436'
+    // },
+    // {
+    //     imageURL: image4,
+    //     creatorName: 'Whiteswan',
+    //     amount: '$15.735.436'
+    // },
+    // {
+    //     imageURL: image4,
+    //     creatorName: 'Whiteswan',
+    //     amount: '$15.735.436'
+    // },
+    // {
+    //     imageURL: image4,
+    //     creatorName: 'Whiteswan',
+    //     amount: '$15.735.436'
+    // },
+    // {
+    //     imageURL: image4,
+    //     creatorName: 'Whiteswan',
+    //     amount: '$15.735.436'
+    // },
 ]
 
 export default creatorItems
