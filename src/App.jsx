@@ -8,6 +8,13 @@ import creatorItems from "./constants/creatorConstants.jsx";
 import categories from "./constants/categoryConstants.jsx";
 import CategoryCard from "./components/category-card/categoryCard.jsx";
 import Carousel from "./components/carousel/carousel.jsx";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./components/ui/select.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -38,9 +45,16 @@ function App() {
 
       {/* Top collections - exclusive drops */}
       <section className="w-full bg-[#100E1F] px-2 py-4 lg:py-20 space-y-4 lg:space-y-6">
-        <div className="max-w-[1260px] text-white font-readex-pro mx-auto">
-          <p className="text-sm text-[#94A3B8]">Top collections</p>
-          <h2 className="text-2xl font-semibold leading-7">Exclusive drops</h2>
+        <div className="max-w-[1260px] flex justify-between text-white font-readex-pro mx-auto">
+          <div>
+            <p className="text-sm text-[#94A3B8]">Top collections</p>
+            <h2 className="text-2xl font-semibold leading-7">
+              Exclusive drops
+            </h2>
+          </div>
+          <a href="" className="text-sm text-[#A87EFF] my-auto">
+            See all
+          </a>
         </div>
         <div className="w-full max-w-[1260px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 place-items-between mx-auto">
           {creatorItems.map((item, index) => {
@@ -59,9 +73,14 @@ function App() {
 
       {/* NFT cards section */}
       <section className="w-full bg-[#151329] px-2 py-4 lg:py-20 space-y-4 lg:space-y-6">
-        <div className="max-w-[1260px] text-white font-readex-pro mx-auto">
-          <p className="text-sm text-[#94A3B8]">New & worthy</p>
-          <h2 className="text-2xl font-semibold leading-7">Hot bids</h2>
+        <div className="max-w-[1260px] flex justify-between text-white font-readex-pro mx-auto">
+          <div>
+            <p className="text-sm text-[#94A3B8]">New & worthy</p>
+            <h2 className="text-2xl font-semibold leading-7">Hot bids</h2>
+          </div>
+          <a href="" className="text-sm text-[#A87EFF] my-auto">
+            See all
+          </a>
         </div>
         <div className="w-fit max-w-[1260px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-5 place-items-center mx-auto">
           {cardItems.map((item) => {
@@ -82,9 +101,14 @@ function App() {
 
       {/* Top creators section */}
       <section className="w-full bg-[#100E1F] px-2 py-4 lg:py-20 space-y-4 lg:space-y-6">
-        <div className="max-w-[1260px] text-white font-readex-pro mx-auto">
-          <p className="text-sm text-[#94A3B8]">Most active</p>
-          <h2 className="text-2xl font-semibold leading-7">Top Creators</h2>
+        <div className="max-w-[1260px] flex justify-between text-white font-readex-pro mx-auto">
+          <div>
+            <p className="text-sm text-[#94A3B8]">Most active</p>
+            <h2 className="text-2xl font-semibold leading-7">Top Creators</h2>
+          </div>
+          <a href="" className="text-sm text-[#A87EFF] my-auto">
+            See all
+          </a>
         </div>
         <div className="w-full max-w-[1260px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 place-items-between mx-auto">
           {creatorItems.map((item, index) => {
@@ -103,9 +127,25 @@ function App() {
 
       {/* NFT cards section - explore */}
       <section className="w-full bg-[#151329] px-2 py-4 lg:py-20 space-y-4 lg:space-y-6">
-        <div className="max-w-[1260px] text-white font-readex-pro mx-auto">
-          <p className="text-sm text-[#94A3B8]">Top collections</p>
-          <h2 className="text-2xl font-semibold leading-7">Explore</h2>
+        <div className="max-w-[1260px] flex justify-between text-white font-readex-pro mx-auto">
+          <div>
+            <p className="text-sm text-[#94A3B8]">Top collections</p>
+            <h2 className="text-2xl font-semibold leading-7">Explore</h2>
+          </div>
+          <div className="my-auto">
+            <Select onValueChange={(value) => console.log(value)}>
+              <SelectTrigger className="border-2 border-[#363355] bg-[#1E1B48] rounded-[40px] gap-2">
+                <SelectValue placeholder="Filter" />
+              </SelectTrigger>
+              <SelectContent className="bg-[#1E1B48] font-semibold text-white border-2 border-[#9a8fff] rounded-xl font-readex-pro">
+                <SelectItem value="All" className="focus:bg-[#D0AAFF33] focus:text-white rounded-md">All</SelectItem>
+                <SelectItem value="Art" className="focus:bg-[#D0AAFF33] focus:text-white rounded-md">Art</SelectItem>
+                <SelectItem value="Audio" className="focus:bg-[#D0AAFF33] focus:text-white rounded-md">Audio</SelectItem>
+                <SelectItem value="3D" className="focus:bg-[#D0AAFF33] focus:text-white rounded-md">3D</SelectItem>
+                <SelectItem value="GenAI" className="focus:bg-[#D0AAFF33] focus:text-white rounded-md">GenAI</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
         <div className="w-fit max-w-[1260px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-5 place-items-center mx-auto">
           {cardItems.map((item) => {
