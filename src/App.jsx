@@ -8,6 +8,9 @@ import creatorItems from "./constants/creatorConstants.jsx";
 import categories from "./constants/categoryConstants.jsx";
 import CategoryCard from "./components/category-card/categoryCard.jsx";
 import Carousel from "./components/carousel/carousel.jsx";
+import filterIcon from "./assets/filter/filterIcon.svg"
+import collectionsIcon from "./assets/filter/collectionsIcon.svg"
+import sortIcon from "./assets/filter/sortbyIcon.svg"
 import {
   Select,
   SelectContent,
@@ -132,19 +135,40 @@ function App() {
             <p className="text-sm text-[#94A3B8]">Top collections</p>
             <h2 className="text-2xl font-semibold leading-7">Explore</h2>
           </div>
+          {/* Filters */}
           <div className="my-auto">
-            <Select onValueChange={(value) => console.log(value)}>
-              <SelectTrigger className="border-2 border-[#363355] bg-[#1E1B48] rounded-[40px] gap-2">
-                <SelectValue placeholder="Filter" />
-              </SelectTrigger>
-              <SelectContent className="bg-[#1E1B48] font-semibold text-white border-2 border-[#9a8fff] rounded-xl font-readex-pro">
-                <SelectItem value="All" className="focus:bg-[#D0AAFF33] focus:text-white rounded-md">All</SelectItem>
-                <SelectItem value="Art" className="focus:bg-[#D0AAFF33] focus:text-white rounded-md">Art</SelectItem>
-                <SelectItem value="Audio" className="focus:bg-[#D0AAFF33] focus:text-white rounded-md">Audio</SelectItem>
-                <SelectItem value="3D" className="focus:bg-[#D0AAFF33] focus:text-white rounded-md">3D</SelectItem>
-                <SelectItem value="GenAI" className="focus:bg-[#D0AAFF33] focus:text-white rounded-md">GenAI</SelectItem>
-              </SelectContent>
-            </Select>
+            <div className="flex gap-4">
+              <Select onValueChange={(value) => console.log(value)}>
+                <SelectTrigger icon={filterIcon} className="border-2 border-[#363355] text-[#9A8FFF] bg-[#1E1B48] rounded-[40px] gap-2">
+                  <SelectValue placeholder="Filter" />
+                </SelectTrigger>
+                <SelectContent className="bg-[#1E1B48] font-semibold text-white border-2 border-[#9a8fff] rounded-xl font-readex-pro">
+                  <SelectItem value="All" className="focus:bg-[#D0AAFF33] focus:text-white py-3">All</SelectItem>
+                  <SelectItem value="Art" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Art</SelectItem>
+                  <SelectItem value="Audio" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Audio</SelectItem>
+                  <SelectItem value="3D" className="focus:bg-[#D0AAFF33] focus:text-white py-3">3D</SelectItem>
+                  <SelectItem value="GenAI" className="focus:bg-[#D0AAFF33] focus:text-white py-3">GenAI</SelectItem>
+                </SelectContent>
+              </Select>
+              <Select onValueChange={(value) => console.log(value)}>
+                <SelectTrigger className="hidden lg:flex border-2 border-[#363355] text-[#9A8FFF] bg-[#1E1B48] rounded-[40px] gap-2">
+                  <SelectValue placeholder="Collections" />
+                </SelectTrigger>
+                <SelectContent className="bg-[#1E1B48] font-semibold text-white border-2 border-[#9a8fff] rounded-xl font-readex-pro">
+                  <SelectItem value="All" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Collections</SelectItem>
+                  <SelectItem value="Art" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Creators</SelectItem>
+                </SelectContent>
+              </Select>
+              <Select onValueChange={(value) => console.log(value)}>
+                <SelectTrigger icon={sortIcon} className="hidden lg:flex border-2 border-[#363355] text-[#9A8FFF] bg-[#1E1B48] rounded-[40px] gap-2">
+                  <SelectValue placeholder="Recently added" />
+                </SelectTrigger>
+                <SelectContent className="bg-[#1E1B48] font-semibold text-white border-2 border-[#9a8fff] rounded-xl font-readex-pro">
+                  <SelectItem value="All" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Recently added</SelectItem>
+                  <SelectItem value="Art" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Recently added</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
           </div>
         </div>
         <div className="w-fit max-w-[1260px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-5 place-items-center mx-auto">
