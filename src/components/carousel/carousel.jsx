@@ -12,9 +12,9 @@ function Carousel() {
   return (
     <div
       ref={emblaRef}
-      className="embla relative w-full max-w-[1400px] bg-[#211f4c] bg-gradient-to-b from-[#211f4c] to-[#7a1df6] lg:rounded-2xl py-4 lg:py-14 mx-auto"
+      className="embla relative w-full max-w-[1400px] lg:rounded-2xl py-4 lg:py-14 mx-auto"
     >
-      <img src={graphic} alt="" className="hidden lg:block absolute right-0 opacity-50 blur-sm pointer-events-none" />
+      {/* <img src={graphic} alt="" className="hidden lg:block absolute  right-0 opacity-50 blur-sm" /> */}
       {/* Carousel slides container */}
       <div className="embla__container">
         <div className="embla__slide">

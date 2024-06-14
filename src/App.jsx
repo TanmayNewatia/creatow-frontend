@@ -150,22 +150,22 @@ function App() {
                   <SelectItem value="GenAI" className="focus:bg-[#D0AAFF33] focus:text-white py-3">GenAI</SelectItem>
                 </SelectContent>
               </Select>
-              <Select onValueChange={(value) => console.log(value)}>
-                <SelectTrigger className="hidden lg:flex border-2 border-[#363355] text-[#9A8FFF] bg-[#1E1B48] rounded-[40px] gap-2">
+              <Select defaultValue="Collections" onValueChange={(value) => console.log(value)}>
+                <SelectTrigger icon={collectionsIcon} className="hidden lg:flex border-2 border-[#363355] text-[#9A8FFF] bg-[#1E1B48] rounded-[40px] gap-2">
                   <SelectValue placeholder="Collections" />
                 </SelectTrigger>
                 <SelectContent className="bg-[#1E1B48] font-semibold text-white border-2 border-[#9a8fff] rounded-xl font-readex-pro">
-                  <SelectItem value="All" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Collections</SelectItem>
-                  <SelectItem value="Art" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Creators</SelectItem>
+                  <SelectItem value="Collections" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Collections</SelectItem>
+                  <SelectItem value="Creators" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Creators</SelectItem>
                 </SelectContent>
               </Select>
-              <Select onValueChange={(value) => console.log(value)}>
+              <Select  onValueChange={(value) => console.log(value)}>
                 <SelectTrigger icon={sortIcon} className="hidden lg:flex border-2 border-[#363355] text-[#9A8FFF] bg-[#1E1B48] rounded-[40px] gap-2">
                   <SelectValue placeholder="Recently added" />
                 </SelectTrigger>
                 <SelectContent className="bg-[#1E1B48] font-semibold text-white border-2 border-[#9a8fff] rounded-xl font-readex-pro">
-                  <SelectItem value="All" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Recently added</SelectItem>
-                  <SelectItem value="Art" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Recently added</SelectItem>
+                  <SelectItem value="RecentlyAdded" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Recently added</SelectItem>
+                  <SelectItem value="RecentlyAdded" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Recently added</SelectItem>
                 </SelectContent>
               </Select>
             </div>
