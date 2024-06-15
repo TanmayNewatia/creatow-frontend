@@ -1,0 +1,16 @@
+.embla {
+  overflow: hidden;
+  background-image: linear-gradient(#211f4c, #7a1df6),
+    url("../../assets/carousel/carouselBgGraphic.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position: right bottom;
+  background-blend-mode: hard-light;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
