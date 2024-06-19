@@ -165,7 +165,7 @@ function App() {
                 </SelectTrigger>
                 <SelectContent className="bg-[#1E1B48] font-semibold text-white border-2 border-[#9a8fff] rounded-xl font-readex-pro">
                   <SelectItem value="RecentlyAdded" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Recently added</SelectItem>
-                  <SelectItem value="RecentlyAdded" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Recently added</SelectItem>
+                  <SelectItem value="LastUpdated" className="focus:bg-[#D0AAFF33] focus:text-white py-3">Last Updated</SelectItem>
                 </SelectContent>
               </Select>
             </div>

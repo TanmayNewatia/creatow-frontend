@@ -38,7 +38,7 @@ function NavAccDropdown() {
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <>
+    <div className="sticky top-0 z-50">
       <nav className="bg-[#010314] flex justify-between items-center gap-3 py-2 px-4 md:px-8">
         {/* Hamburger menu - visible only on mobile */}
         <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden">
@@ -80,7 +80,7 @@ function Navbar() {
           <a href="">Some Link</a>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
