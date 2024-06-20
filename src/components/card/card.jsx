@@ -4,6 +4,7 @@ import personVector from "../../assets/card/person.svg";
 import avatar1 from "../../assets/card/avatar1.png";
 import avatar2 from "../../assets/card/avatar2.png";
 import optionsIcon from "../../assets/card/optionsIcon.svg";
+import heartIcon from "../../assets/card/heartIcon.svg";
 
 
 const Card = (props) => {
@@ -45,16 +46,22 @@ const Card = (props) => {
             </div>
           </div>
           {/* Creation date & collector count */}
-          <div className="text-white flex gap-4">
-            <div className="w-fit flex justify-center items-center gap-1">
-              <img src={calendarVector} alt="" />
-              <p className="text-[12px] leading-[10px] text-nowrap">
-                {props.publishedDate}
-              </p>
+          <div className="text-white flex justify-between gap-4">
+            <div className="flex gap-4">
+              <div className="w-fit flex justify-center items-center gap-1">
+                <img src={calendarVector} alt="" />
+                <p className="text-[12px] leading-[10px] text-nowrap">
+                  {props.publishedDate}
+                </p>
+              </div>
+              <div className="w-fit flex justify-center items-center gap-1">
+                <img src={personVector} alt="" />
+                <p className="text-[12px] leading-[10px]">{props.collectors}</p>
+              </div>
             </div>
             <div className="w-fit flex justify-center items-center gap-1">
-              <img src={personVector} alt="" />
-              <p className="text-[12px] leading-[10px]">{props.collectors}</p>
+              <img src={heartIcon} alt="" />
+              <p className="text-[12px] leading-[10px]">{props.likes}</p>
             </div>
           </div>
         </div>

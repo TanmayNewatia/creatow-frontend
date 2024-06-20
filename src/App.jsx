@@ -95,6 +95,7 @@ function App() {
                 collectors={item.collectors}
                 collectionName={item.collectionName}
                 creatorName={item.creatorName}
+                likes={item.likes}
                 showAvatars
               />
             );
@@ -181,6 +182,7 @@ function App() {
                 collectors={item.collectors}
                 collectionName={item.collectionName}
                 creatorName={item.creatorName}
+                likes={item.likes}
               />
             );
           })}
