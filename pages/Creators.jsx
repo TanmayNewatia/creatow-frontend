@@ -132,7 +132,7 @@ function Creators() {
       </section>
 
       <section className="max-w-[1260px] bg-[#080114] px-2 py-4 mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 place-content-center">
+        <div className="w-fit mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 content-center place-items-center">
           {creatorsBig.map((item) => {
             return (
               <CreatorCardBig

@@ -128,7 +128,7 @@ function Vault() {
 
       {/* Cards section */}
       <section>
-        <div className="w-fit max-w-[1260px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-6 place-items-center mx-auto">
+        <div className="w-fit max-w-[1260px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-6 px-2 place-items-center mx-auto">
           {cardItems.map((item) => {
             return (
               <Card
