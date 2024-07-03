@@ -6,7 +6,7 @@ const cardItems = [
     type: "Digital Art",
     collectionName: "Abstract Expressions",
     creatorName: "John Doe",
-    publishedDate: "2023-05-15",
+    publishedDate: "15 May",
     collectors: "1,500",
     likes: "10,000",
     id: "djklf"
@@ -16,7 +16,7 @@ const cardItems = [
     type: "Photography",
     collectionName: "Captured Moments",
     creatorName: "Jane Smith",
-    publishedDate: "2023-04-20",
+    publishedDate: "20 Apr",
     collectors: "800",
     likes: "5,000",
     id: "ajklf"
@@ -26,7 +26,7 @@ const cardItems = [
     type: "Illustration",
     collectionName: "Fantasy Realms",
     creatorName: "Alex Johnson",
-    publishedDate: "2023-06-01",
+    publishedDate: "01 June",
     collectors: "2,000",
     likes: "15,000",
     id: "dajlf"
@@ -36,7 +36,7 @@ const cardItems = [
     type: "Painting",
     collectionName: "Landscapes of Wonder",
     creatorName: "Emily Davis",
-    publishedDate: "2023-03-10",
+    publishedDate: "10 Mar",
     collectors: "1,200",
     likes: "8,000",
     id: "daklf"
@@ -46,7 +46,7 @@ const cardItems = [
     type: "3D Render",
     collectionName: "Futuristic Visions",
     creatorName: "Michael Wilson",
-    publishedDate: "2023-05-30",
+    publishedDate: "30 May",
     collectors: "1,800",
     likes: "12,000",
     id: "dajkl"

@@ -38,7 +38,7 @@ function NavAccDropdown() {
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <>
+    <div className="sticky top-0 z-50">
       <nav className="bg-[#010314] flex justify-between items-center gap-3 py-2 px-4 md:px-8">
         {/* Hamburger menu - visible only on mobile */}
         <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden">
@@ -49,7 +49,7 @@ function Navbar() {
         <div className="hidden lg:flex w-1/3 text-white justify-left items-center gap-8">
           <img src={creatowLogo} alt="company-logo" />
           <a href="">Explore</a>
-          <a href="">Vault</a>
+          <a href="/vault">Vault</a>
         </div>
 
         {/* Searchbar - always visible */}
@@ -58,7 +58,7 @@ function Navbar() {
           name=""
           id=""
           placeholder="Collection, item or user"
-          className="lg:w-1/3 bg-[#2B225B] w-4/5 bg-search-bar-icon bg-no-repeat bg-[12px_center] rounded-[48px] py-3 px-3 pl-10 text-[#9A8FFF] font-readex-pro text-sm outline-none"
+          className="lg:w-1/3 w-4/5 max-w-[442px] bg-[#2B225B] bg-search-bar-icon bg-no-repeat bg-[12px_center] rounded-[48px] py-3 px-3 pl-10 text-[#9A8FFF] font-readex-pro text-sm outline-none"
         />
 
         {/* Small profile icon - visible only on mobile */}
@@ -80,7 +80,7 @@ function Navbar() {
           <a href="">Some Link</a>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
