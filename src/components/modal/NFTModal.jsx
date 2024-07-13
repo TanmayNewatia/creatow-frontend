@@ -34,7 +34,7 @@ function NFTModal(props) {
             className="hidden lg:block max-w-[522px] h-fit aspect-square"
           />
 
-          {/* Right content */}
+          {/* Right content - Desktop */}
           <div className="w-full space-y-3">
             {/* ULTIMATE Tag */}
             <div className="w-fit h-[32px] bg-card-tag rounded-lg p-[2px]">
@@ -87,19 +87,10 @@ function NFTModal(props) {
                 Top 500 thankers are gauranteed a Rare.
               </p>
             </div>
-
-            {/* From the same drop */}
-            <div className="w-full border border-[#d0aaff30] rounded-lg space-y-3 p-5">
-              <h3 className="font-medium">FROM THE SAME DROP</h3>
-              <p className="text-[#94A3B8] text-sm leading-8">
-                Top 20 Thankers will receive a legendary <br />
-                Top 500 thankers are gauranteed a Rare.
-              </p>
-            </div>
           </div>
         </div>
 
-        {/* Mobile */}
+        {/* Right Content - Mobile */}
         <div className="lg:hidden flex flex-col lg:flex-row gap-8 !overflow-y-scroll">
           {/* Right content */}
           <div className="w-full space-y-3">
@@ -158,15 +149,6 @@ function NFTModal(props) {
                   Top 500 thankers are gauranteed a Rare.
                 </p>
               </div>
-
-              {/* From the same drop */}
-              <div className="w-full border border-[#d0aaff30] rounded-lg space-y-3 p-5">
-                <h3 className="font-medium">FROM THE SAME DROP</h3>
-                <p className="text-[#94A3B8] text-sm leading-8">
-                  Top 20 Thankers will receive a legendary <br />
-                  Top 500 thankers are gauranteed a Rare.
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -178,7 +160,7 @@ function NFTModal(props) {
             <CarouselContent className="w-fit">
               {cardItems.map((item) => {
                 return (
-                  <CarouselItem className="basis-1/4 flex justify-center items-center">
+                  <CarouselItem key={item.id} className="basis-1/4 flex justify-center items-center">
                     {/* DISABLED CARD CLICKS WITHIN MODAL FOR NOW */}
                     <div className="pointer-events-none">
                       <Card

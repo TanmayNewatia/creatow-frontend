@@ -55,7 +55,7 @@ const Card = (props) => {
           {/* Creation date & collector count */}
           <div className="text-white flex justify-between gap-4">
             <div className="flex gap-4">
-              <div className="w-fit flex justify-center items-center gap-1">
+              <div className="hidden md:flex w-fit justify-center items-center gap-1">
                 <img src={calendarVector} alt="" />
                 <p className="text-[12px] leading-[10px] text-nowrap">
                   {props.publishedDate}
