@@ -44,6 +44,7 @@ const ConditionalNavbar = () => {
       setIsSignedUp(true);
     } else {
       setIsSignedUp(false);
+      handleSignUp();
     }
   };
 

@@ -10,6 +10,7 @@ import Profile from "../pages/Profile.jsx";
 import { AptosWalletAdapterProvider } from "@aptos-labs/wallet-adapter-react";
 import { PetraWallet } from "petra-plugin-wallet-adapter";
 import { Network } from "lucide-react";
+import "@aptos-labs/wallet-adapter-ant-design/dist/index.css";
 
 const wallets = [new PetraWallet()];
 
