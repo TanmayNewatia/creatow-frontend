@@ -1,39 +1,9 @@
 import React, { useState } from "react";
 import menuIcon from "../../assets/navbar/menuIcon.svg";
-import elixirIcon from "../../assets/navbar/elixirIcon.svg";
 import profilePlaceholder from "../../assets/navbar/profilePlaceholder.png";
-import chevronDown from "../../assets/navbar/chevronDown.svg";
 import creatowLogo from "../../assets/navbar/creatowLogo.svg";
+import ConditionalNavbar from "./conditionalNavbar";
 
-function NavAccDropdown() {
-  return (
-    <div className="hidden lg:flex w-fit text-[#9A8FFF] bg-[#151334] border border-[#2B225B] rounded-lg gap-3 p-2">
-      {/* Elixir count */}
-      <div className="bg-[#150A32] flex justify-center items-center gap-1 rounded-md px-3">
-        <p className="text-sm leading-tight font-semibold">500</p>
-        <img src={elixirIcon} alt="" className="w-4 aspect-square" />
-      </div>
-      {/* Divider line */}
-      <div className="w-[1px] min-h-[27px] h-full bg-[#9A8FFF]"></div>
-      {/* profile icon and dropdown */}
-      <div>
-        <button className="flex justify-center items-center gap-2">
-          <img
-            src={profilePlaceholder}
-            alt=""
-            className="rounded-full w-7 aspect-square"
-          />
-          <p className="text-sm font-semibold tracking-[0.1px]">lofikiss</p>
-          <img
-            src={chevronDown}
-            alt=""
-            className="rounded-full w-3 aspect-square"
-          />
-        </button>
-      </div>
-    </div>
-  );
-}
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,7 +38,7 @@ function Navbar() {
 
         {/* Elixir count and dropdown - visible only on desktop */}
         <div className="hidden lg:flex w-1/3 justify-end">
-          <NavAccDropdown />
+          <ConditionalNavbar />
         </div>
       </nav>
       {/* Hamburger menu content */}

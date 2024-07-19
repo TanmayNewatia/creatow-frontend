@@ -7,6 +7,11 @@ import Collectibles from "/pages/Collectibles.jsx";
 import Creators from "../pages/Creators.jsx";
 import Vault from "../pages/Vault.jsx";
 import Profile from "../pages/Profile.jsx";
+import { AptosWalletAdapterProvider } from "@aptos-labs/wallet-adapter-react";
+import { PetraWallet } from "petra-plugin-wallet-adapter";
+import { Network } from "lucide-react";
+
+const wallets = [new PetraWallet()];
 
 const router = createBrowserRouter([
   {
@@ -33,6 +38,14 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AptosWalletAdapterProvider
+      plugins={wallets}
+      autoConnect={true}
+      optInWallets={["Petra"]}
+      dappConfig={{ network: Network.DEVNET }}
+      onError={(error) => console.error(error)}
+    >
+      <RouterProvider router={router} />
+    </AptosWalletAdapterProvider>
   </React.StrictMode>
 );
