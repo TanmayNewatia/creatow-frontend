@@ -20,12 +20,12 @@ function Profile() {
       <Navbar />
 
       {/* Top purple banner */}
-      <section className="w-full max-w-[1400px] h-[200px] bg-gradient-to-r from-[#5247af] to-[#4b40ae] via-[#7620ee] rounded-b-2xl mx-auto"></section>
+      <section className="w-full max-w-[1400px] h-[50vh] lg:h-[200px] bg-gradient-to-r from-[#5247af] to-[#4b40ae] via-[#7620ee] lg:rounded-b-2xl mx-auto"></section>
 
       {/* Content */}
-      <section className="w-[90%] max-w-[1300px] flex gap-10 mx-auto">
+      <section className="w-full max-w-[1300px] flex flex-col lg:flex-row justify-center items-center lg:items-start gap-10 mx-auto">
         {/* Profile card */}
-        <div className="w-fit h-fit bg-[#151329] text-white p-6 space-y-5 rounded-2xl mt-[-80px]">
+        <div className="w-fit h-fit bg-[#151329] text-white p-6 space-y-5 rounded-2xl mt-[-350px] lg:mt-[-80px]">
           {/* Profile image */}
           <img
             src={profilePfp}
@@ -91,12 +91,12 @@ function Profile() {
             defaultValue="for you"
             className="w-full flex flex-col justify-center items-start"
           >
-            <TabsList className="bg-[#0d0a1b]">
+            <TabsList className="bg-[#0d0a1b] flex justify-center items-center lg:justify-start">
               <TabsTrigger value="for you">My Collections</TabsTrigger>
               <TabsTrigger value="subscribed">My Appreciations</TabsTrigger>
             </TabsList>
             <TabsContent value="for you">
-              <div className="w-fit max-w-[1260px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-5 place-items-center px-8 pt-4 pb-8 mx-auto">
+              <div className="w-fit max-w-[1260px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-5 place-items-center px-4 lg:px-8 lg:pt-4 pb-8 mx-auto">
                 {cardItems.map((item) => {
                   return (
                     <Card
@@ -113,7 +113,7 @@ function Profile() {
               </div>
             </TabsContent>
             <TabsContent value="subscribed">
-              <div className="w-fit max-w-[1260px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-5 place-items-center px-8 pt-4 pb-8 mx-auto">
+              <div className="w-fit max-w-[1260px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-5 place-items-center px-4 lg:px-8 lg:pt-4 pb-8 mx-auto">
                 {cardItems.map((item, index) => {
                   if (index <= 3) {
                     return (
