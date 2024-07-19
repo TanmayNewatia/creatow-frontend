@@ -9,7 +9,7 @@ import Vault from "../pages/Vault.jsx";
 import Profile from "../pages/Profile.jsx";
 import { AptosWalletAdapterProvider } from "@aptos-labs/wallet-adapter-react";
 import { PetraWallet } from "petra-plugin-wallet-adapter";
-import { Network } from "lucide-react";
+import { Network } from "@aptos-labs/ts-sdk";
 import "@aptos-labs/wallet-adapter-ant-design/dist/index.css";
 
 const wallets = [new PetraWallet()];
