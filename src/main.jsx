@@ -11,7 +11,7 @@ import { AptosWalletAdapterProvider } from "@aptos-labs/wallet-adapter-react";
 import { PetraWallet } from "petra-plugin-wallet-adapter";
 import { Network } from "@aptos-labs/ts-sdk";
 import "@aptos-labs/wallet-adapter-ant-design/dist/index.css";
-
+import { BlockchainProvider } from "./components/blockchainProvider.jsx";
 const wallets = [new PetraWallet()];
 
 const router = createBrowserRouter([
@@ -46,7 +46,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       dappConfig={{ network: Network.DEVNET }}
       onError={(error) => console.error(error)}
     >
-      <RouterProvider router={router} />
+      <BlockchainProvider>
+        <RouterProvider router={router} />
+      </BlockchainProvider>
     </AptosWalletAdapterProvider>
   </React.StrictMode>
 );
