@@ -7,6 +7,7 @@ import Collectibles from "/pages/Collectibles.jsx";
 import Creators from "../pages/Creators.jsx";
 import Vault from "../pages/Vault.jsx";
 import Profile from "../pages/Profile.jsx";
+import NFT from "../pages/NFT.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
     path: "/profile",
     element: <Profile />,
   },
+  {
+    path: "/creator/nft/:nftID",
+    element: <NFT/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -90,6 +90,7 @@ function App() {
             return (
               <Card
                 key={item.id}
+                id={item.id}
                 imageURL={item.imageURL}
                 publishedDate={item.publishedDate}
                 collectors={item.collectors}
@@ -177,6 +178,7 @@ function App() {
             return (
               <Card
                 key={item.id}
+                id={item.id}
                 imageURL={item.imageURL}
                 publishedDate={item.publishedDate}
                 collectors={item.collectors}

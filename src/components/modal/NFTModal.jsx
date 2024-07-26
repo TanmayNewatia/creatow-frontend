@@ -16,16 +16,7 @@ import cardItems from "../../constants/card";
 
 function NFTModal(props) {
   return (
-    <main className="fixed w-screen h-screen top-0 left-0 bg-black bg-opacity-20 backdrop-blur-md z-[9999] !overflow-y-auto">
-      <section className="relative w-full max-w-[1260px] text-white bg-[#19162f] p-0 lg:p-16 mx-auto my-auto">
-        {/* Close button */}
-        <button
-          onClick={() => props.closeFn(false)}
-          className="absolute top-6 right-6"
-        >
-          <img src={crossIcon} alt="" />
-        </button>
-
+      <section className="w-full max-w-[1260px] text-white bg-[#19162f] mx-auto my-auto">
         <div className="hidden lg:flex flex-col lg:flex-row gap-8 !overflow-y-scroll">
           {/* Big NFT image */}
           <img
@@ -161,18 +152,16 @@ function NFTModal(props) {
               {cardItems.map((item) => {
                 return (
                   <CarouselItem key={item.id} className="basis-1/4 flex justify-center items-center">
-                    {/* DISABLED CARD CLICKS WITHIN MODAL FOR NOW */}
-                    <div className="pointer-events-none">
-                      <Card
-                        key={item.id}
-                        imageURL={item.imageURL}
-                        publishedDate={item.publishedDate}
-                        collectors={item.collectors}
-                        collectionName={item.collectionName}
-                        creatorName={item.creatorName}
-                        likes={item.likes}
-                      />
-                    </div>
+                    <Card
+                      key={item.id}
+                      id={item.id}
+                      imageURL={item.imageURL}
+                      publishedDate={item.publishedDate}
+                      collectors={item.collectors}
+                      collectionName={item.collectionName}
+                      creatorName={item.creatorName}
+                      likes={item.likes}
+                    />
                   </CarouselItem>
                 );
               })}
@@ -199,7 +188,6 @@ function NFTModal(props) {
           })}
         </div>
       </section>
-    </main>
   );
 }
 
