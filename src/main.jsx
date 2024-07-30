@@ -8,6 +8,7 @@ import Creators from "../pages/Creators.jsx";
 import Vault from "../pages/Vault.jsx";
 import Profile from "../pages/Profile.jsx";
 import NFT from "../pages/NFT.jsx";
+import CreatorProfile from "../pages/CreatorProfile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile />,
+  },
+  {
+    path: "/creator-profile",
+    element: <CreatorProfile/>
+
   },
   {
     path: "/creator/nft/:nftID",
