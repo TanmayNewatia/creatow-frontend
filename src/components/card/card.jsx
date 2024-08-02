@@ -6,18 +6,14 @@ import avatar2 from "../../assets/card/avatar2.png";
 import optionsIcon from "../../assets/card/optionsIcon.svg";
 import heartIcon from "../../assets/card/heartIcon.svg";
 import NFTModal from "../modal/NFTModal";
+import { Link } from "react-router-dom";
 
 
 const Card = (props) => {
   const [showModal, setShowModal] = useState(false)
   return (
     <>
-      {showModal && (
-        <NFTModal
-          closeFn={setShowModal}
-        />
-      )}
-      <div onClick={() => setShowModal(true)} className="w-full max-w-[300px] h-full min-h-[325px] bg-[#27194E] border border-[#d0aaff30] rounded-2xl p-4 flex flex-col justify-start items-center cursor-pointer">
+      <Link to={`/creator/nft/${props.id}`} className="w-full max-w-[300px] h-full min-h-[325px] bg-[#27194E] border border-[#d0aaff30] rounded-2xl p-4 flex flex-col justify-start items-center cursor-pointer">
         {/* Top avatars & extra options section - conditionally rendered */}
         {props.showAvatars && (
           <div className="w-full h-fit flex justify-between items-center gap-3 pb-3">
@@ -55,7 +51,7 @@ const Card = (props) => {
           {/* Creation date & collector count */}
           <div className="text-white flex justify-between gap-4">
             <div className="flex gap-4">
-              <div className="w-fit flex justify-center items-center gap-1">
+              <div className="hidden lg:flex w-fit justify-center items-center gap-1">
                 <img src={calendarVector} alt="" />
                 <p className="text-[12px] leading-[10px] text-nowrap">
                   {props.publishedDate}
@@ -72,7 +68,7 @@ const Card = (props) => {
             </div>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 };
