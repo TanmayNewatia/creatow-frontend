@@ -8,13 +8,12 @@ import {
   TableHeader,
   TableRow,
 } from "../ui/table";
-import smallpfp from "../../assets/profile/leaderboard/smallPfpPlaceholder.svg";
 
-function DropsTable() {
+function DropsTable(props) {
   return (
     <div className="w-full max-w-[1260px] text-white">
       <Table>
-        <TableCaption>leaderboard</TableCaption>
+        {/* <TableCaption>leaderboard</TableCaption> */}
         <TableHeader>
           <TableRow>
             <TableHead className="text-left">Collections</TableHead>
@@ -25,21 +24,27 @@ function DropsTable() {
           </TableRow>
         </TableHeader>
         <TableBody className="font-semibold">
-          <TableRow>
-            <TableCell className="text-center">
-              <div className="w-fit flex justify-start items-center gap-4">
-                <div className="w-6 aspect-square bg-[#493481] rounded-md text-center flex justify-center items-center">
-                  <p className="text-sm">{1}</p>
-                </div>
-                <img src={smallpfp} alt="" />
-                <p>ALTA</p>
-              </div>
-            </TableCell>
-            <TableCell className="text-center">100</TableCell>
-            <TableCell className="text-center">21K</TableCell>
-            <TableCell className="text-center">30/09/2023</TableCell>
-            <TableCell className="text-center">12</TableCell>
-          </TableRow>
+          {props.content.map((item) => {
+            return (
+              <TableRow key={item.position}>
+                <TableCell className="text-center">
+                  <div className="w-fit flex justify-start items-center gap-4">
+                    <div className="w-6 aspect-square bg-[#493481] rounded-md text-center flex justify-center items-center">
+                      <p className="text-sm">{item.position}</p>
+                    </div>
+                    <img src={item.image} alt="" />
+                    <p>{item.collectionName}</p>
+                  </div>
+                </TableCell>
+                <TableCell className="text-center">
+                  {item.collectorCount}
+                </TableCell>
+                <TableCell className="text-center">{item.sparks}</TableCell>
+                <TableCell className="text-center">{item.date}</TableCell>
+                <TableCell className="text-center">{item.mints}</TableCell>
+              </TableRow>
+            );
+          })}
         </TableBody>
       </Table>
     </div>

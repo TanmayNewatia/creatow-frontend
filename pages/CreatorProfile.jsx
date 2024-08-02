@@ -15,15 +15,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../src/components/ui/accordion";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "../src/components/ui/table";
+import subscriberContent from "../src/constants/subscribersTableConstants";
+import dropsContent from "../src/constants/dropsTableContent";
 
 import aboutIcon from "../src/assets/accordion/about.svg";
 import perksIcon from "../src/assets/accordion/perks.svg";
@@ -31,11 +24,12 @@ import perksIcon from "../src/assets/accordion/perks.svg";
 import DashProfileCard from "../src/components/profile/profile-card/DashProfileCard";
 import LeaderboardCard from "../src/components/profile/leaderboard-card/LeaderboardCard";
 import DropsTable from "../src/components/profile/DropsTable";
+import SubscribersTable from "../src/components/profile/SubscribersTable";
 
 function Profile() {
   const [isCreator, setIsCreator] = useState(true);
   return (
-    <main className="min-h-screen bg-[#0d0a1b]">
+    <main className="min-h-screen bg-[#0d0a1b] pb-10">
       <Navbar />
 
       {/* Top purple banner */}
@@ -91,7 +85,7 @@ function Profile() {
             defaultValue="drops"
             className="w-full flex flex-col justify-center items-start bg-[#151329]"
           >
-            <TabsList className="bg-[#0d0a1b] flex justify-center items-center lg:justify-start">
+            <TabsList className="bg-[#0d0a1b] flex justify-center items-center lg:justify-start lg:gap-6">
               <TabsTrigger value="drops">Drops</TabsTrigger>
               <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
               {isCreator && (
@@ -122,7 +116,7 @@ function Profile() {
               )}
 
               {/* Show drops table if creator */}
-              {isCreator && <DropsTable />}
+              {isCreator && <DropsTable content={dropsContent} />}
             </TabsContent>
             <TabsContent value="leaderboard" className="w-full">
               <div className="w-full max-w-[1260px] px-4 lg:px-8 lg:pt-4 pb-8 space-y-4 mx-auto">
@@ -137,6 +131,11 @@ function Profile() {
                   );
                 })}
               </div>
+            </TabsContent>
+
+            {/* Subscribers tab (creator view only) */}
+            <TabsContent value="subscribers" className="w-full">
+              <SubscribersTable content={subscriberContent} />
             </TabsContent>
           </Tabs>
         </section>
