@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import profilePfp from "../../../assets/profile/profilepfp.png";
 import dotsIcon from "../../../assets/profile/dotsIcon.svg";
-import pencilIcon from "../../../assets/profile/pencilIcon.svg";
+import pencilIcon2 from "../../../assets/profile/pencilIcon2.svg";
 import walletIcon from "../../../assets/profile/walletIcon.svg";
 import copyIcon from "../../../assets/profile/copyIcon.svg";
+import plusIcon from "../../../assets/profile/FolderPlus.svg";
+import sparkIcon from "../../../assets/profile/sparkIcon.svg";
 
-
-function DashProfileCard() {
+function DashProfileCard(props) {
   return (
     <>
       {/* Profile card */}
@@ -61,11 +62,48 @@ function DashProfileCard() {
           </div>
         </div>
 
-        {/* Edit profile button */}
-        <button className="w-full bg-white flex justify-center items-center gap-2 py-3 rounded-3xl">
+        {/* buttons */}
+        <div className="space-y-6">
+          {props.isCreator ? (
+            <button className="w-full border border-[#D0AAFF] text-[#D0AAFF] font-medium rounded-lg px-6 py-3">
+              <div className="flex justify-center items-center gap-2">
+                <img src={pencilIcon2} alt="" width={20} height={20} />
+                <p className="font-semibold">Edit your Profile</p>
+              </div>
+            </button>
+          ) : (
+            <>
+              <button className="w-full bg-[#D0AAFF] text-black font-medium rounded-lg px-6 py-3">
+                <div className="flex justify-center items-center gap-2">
+                  <img
+                    src={plusIcon}
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="pt-1"
+                  />
+                  <p className="font-semibold">Subscribe</p>
+                </div>
+              </button>
+              <button className="w-full border border-[#D0AAFF] text-[#D0AAFF] font-medium rounded-lg px-6 py-3">
+                <div className="flex justify-center items-center gap-2">
+                  <img
+                    src={sparkIcon}
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="pt-1"
+                  />
+                  <p className="font-semibold">Thank</p>
+                </div>
+              </button>
+            </>
+          )}
+        </div>
+        {/* <button className="w-full bg-white flex justify-center items-center gap-2 py-3 rounded-3xl">
           <p className="text-black font-medium">Edit your Profile</p>
           <img src={pencilIcon} alt="" />
-        </button>
+        </button> */}
       </div>
     </>
   );

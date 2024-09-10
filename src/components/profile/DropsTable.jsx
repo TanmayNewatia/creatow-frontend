@@ -8,6 +8,11 @@ import {
   TableHeader,
   TableRow,
 } from "../ui/table";
+import collectionsIcon from "../../assets/profile/drops/FolderPlus.svg";
+import collectorsIcon from "../../assets/profile/drops/collectorsIcon.svg";
+import sparksIcon from "../../assets/profile/drops/sparksIcon.svg";
+import calendarIcon from "../../assets/profile/drops/calendarIcon.svg";
+import hashIcon from "../../assets/profile/drops/hashIcon.svg";
 
 function DropsTable(props) {
   return (
@@ -16,11 +21,36 @@ function DropsTable(props) {
         {/* <TableCaption>leaderboard</TableCaption> */}
         <TableHeader>
           <TableRow>
-            <TableHead className="text-left">Collections</TableHead>
-            <TableHead className="text-center">Collectors</TableHead>
-            <TableHead className="text-center">Sparks</TableHead>
-            <TableHead className="text-center">Date</TableHead>
-            <TableHead className="text-center">No. of Mints</TableHead>
+            <TableHead className="text-left">
+              <div className="flex justify-start items-center gap-1">
+                <img src={collectionsIcon} alt="" />
+                <p>Collections</p>
+              </div>
+            </TableHead>
+            <TableHead className="text-center">
+              <div className="flex justify-center items-center gap-1">
+                <img src={collectorsIcon} alt="" />
+                <p>Collectors</p>
+              </div>
+            </TableHead>
+            <TableHead className="text-center">
+              <div className="flex justify-center items-center gap-1">
+                <img src={sparksIcon} alt="" />
+                <p>Sparks</p>
+              </div>
+            </TableHead>
+            <TableHead className="text-center">
+              <div className="flex justify-center items-center gap-1">
+                <img src={calendarIcon} alt="" />
+                <p>Date</p>
+              </div>
+            </TableHead>
+            <TableHead className="text-center">
+              <div className="flex justify-center items-center gap-1">
+                <img src={hashIcon} alt="" />
+                <p>No of Mints</p>
+              </div>
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody className="font-semibold">

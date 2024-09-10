@@ -25,6 +25,7 @@ import DashProfileCard from "../src/components/profile/profile-card/DashProfileC
 import LeaderboardCard from "../src/components/profile/leaderboard-card/LeaderboardCard";
 import DropsTable from "../src/components/profile/DropsTable";
 import SubscribersTable from "../src/components/profile/SubscribersTable";
+import ActivitiesTable from "../src/components/profile/ActivitiesTable";
 
 function Profile() {
   const [isCreator, setIsCreator] = useState(true);
@@ -38,7 +39,7 @@ function Profile() {
       {/* Content */}
       <section className="w-full max-w-[1300px] flex flex-col lg:flex-row justify-center items-center lg:items-start gap-10 mx-auto">
         {/* Profile card */}
-        <DashProfileCard />
+        <DashProfileCard isCreator={isCreator} />
 
         {/* Cards tab group */}
         <section className="w-full max-w-[1260px] h-fit mt-10 mx-auto space-y-8">
@@ -95,6 +96,8 @@ function Profile() {
                 </>
               )}
             </TabsList>
+
+            {/* Drops tab - User POV */}
             <TabsContent value="drops" className="w-full">
               {!isCreator && (
                 <div className="w-fit max-w-[1260px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-5 place-items-center px-4 lg:px-8 lg:pt-4 pb-8 mx-auto">
@@ -115,7 +118,7 @@ function Profile() {
                 </div>
               )}
 
-              {/* Show drops table if creator */}
+              {/* Drops tab - Creator POV */}
               {isCreator && <DropsTable content={dropsContent} />}
             </TabsContent>
             <TabsContent value="leaderboard" className="w-full">
@@ -133,9 +136,14 @@ function Profile() {
               </div>
             </TabsContent>
 
-            {/* Subscribers tab (creator view only) */}
+            {/* Subscribers tab - Creator POV */}
             <TabsContent value="subscribers" className="w-full">
               <SubscribersTable content={subscriberContent} />
+            </TabsContent>
+
+            {/* Activities tab - Creator POV */}
+            <TabsContent value="activities" className="w-full">
+              <ActivitiesTable />
             </TabsContent>
           </Tabs>
         </section>
