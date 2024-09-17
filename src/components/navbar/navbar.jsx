@@ -18,7 +18,7 @@ function Navbar() {
         </button>
 
         {/* Logo and links - visible only on desktop */}
-        <div className="hidden lg:flex w-1/3 text-white justify-left items-center gap-8">
+        <div className="hidden lg:flex w-1/3 text-white justify-left items-center gap-8 my-auto">
           <a href="/">
             <img src={creatowLogo} alt="company-logo" />
           </a>
@@ -32,7 +32,7 @@ function Navbar() {
           name=""
           id=""
           placeholder="Collection, item or user"
-          className="lg:w-1/3 w-4/5 max-w-[442px] bg-[#2B225B] bg-search-bar-icon bg-no-repeat bg-[12px_center] rounded-[48px] py-3 px-3 pl-10 text-[#9A8FFF] font-readex-pro text-sm outline-none"
+          className="my-auto lg:w-1/3 w-4/5 max-w-[442px] bg-[#2B225B] bg-search-bar-icon bg-no-repeat bg-[12px_center] rounded-[48px] py-3 px-3 pl-10 text-[#9A8FFF] font-readex-pro text-sm outline-none"
         />
 
         {/* Small profile icon - visible only on mobile
@@ -41,7 +41,7 @@ function Navbar() {
         </button> */}
 
         {/* Elixir count and dropdown - visible only on desktop */}
-        <div className="hidden lg:flex w-1/3 justify-end">
+        <div className="hidden lg:flex w-1/3 justify-end my-auto">
           <ConditionalNavbar />
         </div>
       </nav>
