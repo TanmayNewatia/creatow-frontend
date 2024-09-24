@@ -3,7 +3,7 @@ import menuIcon from "../../assets/navbar/menuIcon.svg";
 import profilePlaceholder from "../../assets/navbar/profilePlaceholder.png";
 import creatowLogo from "../../assets/navbar/creatowLogo.svg";
 import ConditionalNavbar from "./conditionalNavbar";
-
+import { useBlockchain } from "../blockchainProvider";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
