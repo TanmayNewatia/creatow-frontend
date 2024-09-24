@@ -7,42 +7,42 @@ const creatorItems = [
     {
         imageURL: image1,
         creatorName: 'Brownfish',
-        amount: '$15.735.436'
+        amount: '10'
     },
     {
         imageURL: image1,
         creatorName: 'Brownfish',
-        amount: '$15.735.436'
+        amount: '10'
     },
     {
         imageURL: image1,
         creatorName: 'Brownfish',
-        amount: '$15.735.436'
+        amount: '10'
     },
     {
         imageURL: image1,
         creatorName: 'Brownfish',
-        amount: '$15.735.436'
+        amount: '10'
     },
     {
         imageURL: image2,
         creatorName: 'Tinyleopart',
-        amount: '$15.735.436'
+        amount: '10'
     },
     {
         imageURL: image3,
         creatorName: 'Ticklishkoala',
-        amount: '$15.735.436'
+        amount: '10'
     },
     {
         imageURL: image4,
         creatorName: 'Whiteswan',
-        amount: '$15.735.436'
+        amount: '10'
     },
     {
         imageURL: image4,
         creatorName: 'Whiteswan',
-        amount: '$15.735.436'
+        amount: '10'
     },
     // {
     //     imageURL: image4,

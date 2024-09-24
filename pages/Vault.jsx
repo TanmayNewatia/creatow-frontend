@@ -133,6 +133,7 @@ function Vault() {
             return (
               <Card
                 key={item.id}
+                id={item.id}
                 imageURL={item.imageURL}
                 publishedDate={item.publishedDate}
                 collectors={item.collectors}
